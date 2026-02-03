@@ -177,11 +177,11 @@
 
   for (let i = 1; i <= totalPhotos; i++) {
     const img = document.createElement("img");
-    img.src = "galerie/PHOTO (" + i + ").jpg";
+    img.src = "GALERIE/PHOTO (" + i + ").jpg";
     img.alt = "Chantier JLM Constructions";
 
     img.onerror = () => {
-      console.log("❌ Image non trouvée :", img.src);
+      console.error("❌ Image manquante :", img.src);
     };
 
     gallery.appendChild(img);
@@ -215,7 +215,9 @@
 
 
 
+
   
+
 
 
 
