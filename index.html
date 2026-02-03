@@ -68,6 +68,8 @@
 
     .gallery img {
       width: 100%;
+      height: 220px;
+      object-fit: cover;
       border-radius: 12px;
       box-shadow: 0 10px 20px rgba(0,0,0,0.4);
       opacity: 0;
@@ -175,8 +177,13 @@
 
   for (let i = 1; i <= totalPhotos; i++) {
     const img = document.createElement("img");
-    img.src = `GALERIE/PHOTO/PHOTO (${i}).jpg`;
+    img.src = "galerie/PHOTO (" + i + ").jpg";
     img.alt = "Chantier JLM Constructions";
+
+    img.onerror = () => {
+      console.log("❌ Image non trouvée :", img.src);
+    };
+
     gallery.appendChild(img);
   }
 
@@ -207,7 +214,9 @@
 
 
 
+
   
+
 
 
 
