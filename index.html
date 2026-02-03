@@ -68,8 +68,6 @@
 
     .gallery img {
       width: 100%;
-      height: 220px;
-      object-fit: cover;
       border-radius: 12px;
       box-shadow: 0 10px 20px rgba(0,0,0,0.4);
       opacity: 0;
@@ -95,6 +93,11 @@
       padding: 20px;
       font-size: 0.9rem;
       color: #cccccc;
+    }
+
+    footer p {
+      margin: 5px 0;
+      line-height: 1.5;
     }
 
     a {
@@ -154,7 +157,6 @@
 <section>
   <h2>Nos réalisations</h2>
   <p>Quelques chantiers réalisés par JLM Constructions.</p>
-
   <div class="gallery" id="gallery"></div>
 </section>
 
@@ -169,6 +171,11 @@
 
 <footer>
   <p>© 2026 JLM Constructions – Tous droits réservés</p>
+  <p>
+    Entreprise : <strong>JLM Constructions</strong><br>
+    Dirigeant : SUTA Rénaldo<br>
+    RIDET : <strong>0859173007</strong>
+  </p>
 </footer>
 
 <script>
@@ -177,13 +184,8 @@
 
   for (let i = 1; i <= totalPhotos; i++) {
     const img = document.createElement("img");
-    img.src = "GALERIE/PHOTO (" + i + ").jpg";
+    img.src = `GALERIE/PHOTO (${i}).jpg`;
     img.alt = "Chantier JLM Constructions";
-
-    img.onerror = () => {
-      console.error("❌ Image manquante :", img.src);
-    };
-
     gallery.appendChild(img);
   }
 
@@ -216,7 +218,9 @@
 
 
 
+
   
+
 
 
 
